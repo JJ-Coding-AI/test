@@ -1,0 +1,47 @@
+body {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(9, 40px);
+    grid-template-rows: repeat(9, 40px);
+    gap: 0;
+    margin: 20px auto;
+    width: 360px;
+    border: 2px solid #333;
+}
+
+.square {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #888;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.square.highlight {
+    background-color: #fdd;
+}
+
+.piece {
+    cursor: grab;
+    font-size: 24px;
+}
+
+.captured-area {
+    margin: 10px;
+    min-height: 40px;
+}
+
+.captured-piece {
+    margin: 2px;
+    cursor: grab;
+}
+
+.rotated {
+    transform: rotate(180deg);
+}
